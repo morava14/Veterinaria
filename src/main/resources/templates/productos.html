@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+            <div class="container text-center my-5">
+                <a th:href="@{/}" class="d-flex justify-content-center align-items-center gap-3 text-decoration-none">
+                    <img th:src="@{/img/logo.jpg}" alt="Logo" style="height: 80px;" />
+                    <h1 class="display-4 text-success m-0">Veterinaria</h1>
+                </a>
+            </div>
+            <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+            <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <h1 class="text-center text-success mb-4">Productos</h1>
+        
+        <p class="text-center">Puedes encontrar información de uno de nuestros mejores productos:</p>
+        
+        <!-- Video centrado -->
+        <div class="d-flex justify-content-center">
+            <div class="ratio ratio-16x9" style="max-width: 853px;">
+                <iframe src="https://www.youtube.com/embed/fzTi56yWDA8"
+                        title="Aminoácidos + Vitaminas QualiVet para Perros"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+<div th:insert="layout/plantilla :: footer"></div>
+</html>

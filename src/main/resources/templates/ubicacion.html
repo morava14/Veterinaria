@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <html>
+        <head>
+            <meta charset="UTF-8">
+                <div class="container text-center my-5">
+                    <a th:href="@{/}" class="d-flex justify-content-center align-items-center gap-3 text-decoration-none">
+                        <img th:src="@{/img/logo.jpg}" alt="Logo" style="height: 80px;" />
+                        <h1 class="display-4 text-success m-0">Veterinaria</h1>
+                    </a>
+                </div>
+                <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+                <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+                <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        </head>
+
+        <body class="bg-light">
+
+            <div class="container mt-4">
+                <h1 class="text-success text-center">Ubicación</h1>
+                <p class="text-center">Aquí puedes ubicarnos en San José de Costa Rica.</p>
+
+                <div class="d-flex justify-content-center mt-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.8730698318172!2d-84.06262380321041!3d9.94451759999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e5e4520a620f%3A0x570f15c441bc63ea!2sHospital%20Veterinario%20Hipermascotas!5e0!3m2!1ses-419!2scr!4v1748922734674!5m2!1ses-419!2scr"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </body>
+        <div th:insert="layout/plantilla :: footer"></div>
+    </html>

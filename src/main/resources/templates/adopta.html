@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+            <div class="container text-center my-5">
+                <a th:href="@{/}" class="d-flex justify-content-center align-items-center gap-3 text-decoration-none">
+                    <img th:src="@{/img/logo.jpg}" alt="Logo" style="height: 80px;" />
+                    <h1 class="display-4 text-success m-0">Veterinaria</h1>
+                </a>
+            </div>
+            <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+            <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Historia Inspiradora - Oreo</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .card {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+            transition: transform 0.3s ease;
+        }
+        .btn-contacto {
+            background-color: #19cc83;
+            color: black;
+            border: none;
+        }
+        .btn-contacto:hover {
+            background-color: #17b977;
+            color: white;
+        }
+        img {
+            border-radius: 12px;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="card text-center">
+        <h2 class="text-success mb-3">¡Ya está lista para un hogar!🐾</h2>
+        <img src="/img/oreo.jpg" alt="Oreo" class="img-fluid mb-3"/>
+        <p>
+            Es súper juguetona, de tamaño pequeño/mediano. Se rescató en la zona del Caribe. Tenía un gusano barrenador en el cuello, estaba enferma y triste. <br><br>
+            Cuando llegamos a la casa, estaba amarrada y desnutrida y jamás la íbamos a dejar ahí.
+            Así que se trajo para que viva en libertad. <strong>Oreo</strong> ya está castrada, vacunada y totalmente sana. 
+            Es muy cariñosa y está <strong>listo para ser parte de tu vida ♥️</strong>
+        </p>
+        <a class="btn btn-contacto mt-3" href="https://www.facebook.com/tierradeanimalescr/" target="_blank">
+            ¡Clic aquí si te interesa!
+        </a>
+    </div>
+</body>
+<div th:insert="layout/plantilla :: footer"></div>
+</html>

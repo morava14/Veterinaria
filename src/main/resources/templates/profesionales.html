@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <div class="container text-center my-5">
+                <a th:href="@{/}" class="d-flex justify-content-center align-items-center gap-3 text-decoration-none">
+                    <img th:src="@{/img/logo.jpg}" alt="Logo" style="height: 80px;" />
+                    <h1 class="display-4 text-success m-0">Veterinaria</h1>
+                </a>
+            </div>
+            <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+            <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    <style>
+        .doctor-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="text-center text-success mb-5">Nuestros Profesionales</h1>
+
+    <div class="row g-4">
+        <!-- Doctor 1 -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <img th:src="@{/img/doc1.jpg}" alt="Doctor 1" class="doctor-img">
+                <div class="card-body">
+                    <h5 class="card-title">Cirugía y Medicina Interna</h5>
+                    <p class="card-text">
+                        Especialistas en intervenciones quirúrgicas, diagnóstico y tratamiento de enfermedades sistémicas y de órganos internos.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <img th:src="@{/img/doc2.jpg}" alt="Doctor 2" class="doctor-img">
+                <div class="card-body">
+                    <h5 class="card-title">Diagnóstico por Imágenes</h5>
+                    <p class="card-text">
+                        Especialistas en técnicas como radiografías, ultrasonido y tomografías.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <img th:src="@{/img/doc3.jpg}" alt="Doctor 3" class="doctor-img">
+                <div class="card-body">
+                    <h5 class="card-title">Especialidades Médicas</h5>
+                    <p class="card-text">
+                        Incluye oncología, ortopedia, neurología, oftalmología y dermatología, entre otras.
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+<div th:insert="layout/plantilla :: footer"></div>
+</html>

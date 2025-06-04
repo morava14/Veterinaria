@@ -50,7 +50,7 @@ public class PaginaController {
     
     @GetMapping("/iniciarsesion")
     public String iniciarsesion() {
-        return "iniciarsesion"; // Archivo registrarse.html
+        return "iniciarsesion"; // Archivo iniciarsesion.html
     }
     
     @PostMapping("/iniciarsesion")

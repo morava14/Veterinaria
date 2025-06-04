@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <div class="container text-center my-5">
+        <a th:href="@{/}" class="d-flex justify-content-center align-items-center gap-3 text-decoration-none">
+            <img th:src="@{/img/logo.jpg}" alt="Logo" style="height: 80px;" />
+        </a>
+    </div>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5 col-md-6">
+        <h2 class="mb-4 text-center">Iniciar Sesión</h2>
+
+        <form th:action="@{/iniciarsesion}" method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Aceptar</button>
+        </form>
+
+        <div th:if="${mensaje}" class="alert alert-success mt-3 text-center" role="alert">
+            <p th:text="${mensaje}"></p>
+        </div>
+    </div>
+</body>
+</html>

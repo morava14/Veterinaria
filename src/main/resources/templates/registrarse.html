@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <div class="container text-center my-5">
+                <a th:href="@{/}" class="d-flex justify-content-center align-items-center gap-3 text-decoration-none">
+                    <img th:src="@{/img/logo.jpg}" alt="Logo" style="height: 80px;" />
+                    </a>
+            </div>
+            <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+            <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}" />
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="form-container">
+        <h2 class="form-title text-success">Registro de Usuario</h2>
+        <form th:action="@{/registro}" method="post" onsubmit="mostrarMensaje(); return false;">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Primer Apellido:</label>
+                <input type="text" class="form-control" id="apellido" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="correo" required>
+            </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasena" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Aceptar</button>
+        </form>
+
+        
+        <div id="mensaje" class="alert alert-info mt-3 text-center d-none">
+            Revise su correo electrónico para validar su cuenta.
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje").classList.remove("d-none");
+        }
+    </script>
+</body>
+    <div th:insert="layout/plantilla :: footer"></div>
+</html>

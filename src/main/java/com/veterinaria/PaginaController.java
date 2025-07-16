@@ -17,11 +17,6 @@ public class PaginaController {
     public String informacion() {
         return "informacion";  
     }
-
-    @GetMapping("/productos")
-    public String productos() {
-        return "productos"; // Archivo productos.html
-    }
     
     @GetMapping("/profesionales")
     public String profesionales() {
